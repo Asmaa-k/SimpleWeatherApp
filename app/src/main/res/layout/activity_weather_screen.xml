@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_gray"
+    tools:context=".weatherScreen">
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="35dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/menu" />
+
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/menu"
+        android:layout_alignBottom="@+id/menu"
+        android:layout_toEndOf="@+id/menu">
+
+        <ImageView
+            android:id="@+id/image_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/location" />
+
+        <TextView
+            android:id="@+id/name_loc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="3dp"
+            android:layout_toEndOf="@+id/image_loc"
+            android:text="Amman"
+            android:textColor="#ffffffff"
+            android:textSize="28sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_toEndOf="@+id/image_wheater"
+        android:padding="1dp"
+        android:text="1:00:30"
+        android:textColor="#ffffffff"
+        android:textSize="14sp" />
+
+
+    <ImageView
+        android:id="@+id/image_wheater"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_below="@id/menu"
+        android:layout_centerVertical="true"
+        android:layout_margin="10dp"
+        app:srcCompat="@drawable/suny"
+        android:background="@drawable/circler"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_toEndOf="@+id/image_wheater"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/avg_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="25"
+                android:textColor="#ffffffff"
+                android:textSize="83sp" />
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/avg_temp"
+                android:layout_toRightOf="@+id/avg_temp"
+                android:paddingTop="70dp"
+                android:text="c"
+                android:textColor="#ffffffff"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/avg_temp"
+                android:layout_toRightOf="@+id/avg_temp"
+                android:text="o"
+                android:textColor="#ffffffff"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/wind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                app:srcCompat="@drawable/windy" />
+
+            <TextView
+                android:id="@+id/wind_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:text="wind"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+
+
+            <TextView
+                android:id="@+id/wind_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:text="17m/s"
+                android:textColor="#ffffffff"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <ImageView
+                android:id="@+id/pressu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                app:srcCompat="@drawable/temp" />
+
+
+            <TextView
+                android:id="@+id/pressu_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:text="Pressure"
+                android:textColor="#ffffffff"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/pressu_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="1dp"
+                android:text="1016"
+                android:textColor="#ffffffff"
+                android:textSize="18sp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
